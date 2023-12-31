@@ -103,6 +103,7 @@ def sumTweets(prompt:str,lang = '中文',length:int = 10000, model='openai/gpt-3
     if mail and len(result) > 0:
         if render:
             result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
+        print(result)
         sendEmail(result)
     return result
 
