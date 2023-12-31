@@ -100,10 +100,11 @@ def sumTweets(prompt:str,lang = '中文',length:int = 10000, model='openai/gpt-3
         if 'NOT FOUND' in result:
             result = result + '\n##%s\n\n'%user + completion(model=model, messages=[{"role": "user", "content": prompt, }], api_key=os.environ['OPENAI_API_KEY'],
                        base_url=os.environ['API_BASE_URL'])["choices"][0]["message"]["content"]
+        result = prompt
+        print(result)
     if mail and len(result) > 0:
         if render:
             result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
-        print(result)
         sendEmail(result)
     return result
 
