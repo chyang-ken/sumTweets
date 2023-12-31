@@ -3,7 +3,7 @@ from datetime import datetime,timedelta
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-from litellm import completion
+# from litellm import completion
 from feedparser import parse
 import smtplib
 from email.mime.text import MIMEText
