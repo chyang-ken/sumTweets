@@ -1,6 +1,7 @@
 Python-dotenv
 feedparser
 requests
+litellm
 markdown
 pandas
 bs4
