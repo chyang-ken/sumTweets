@@ -19,8 +19,3 @@ MINS=20
 TARGET='i/lists/1733652180576686386;elonmusk'
 INFO='AI/人工智能'
 ```
-
-# TODO
-去掉 result = prompt
-修改 if 内语句使其调 LLM（去掉备注）
-找到 API url 在哪里配置，加上
