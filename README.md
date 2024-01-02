@@ -19,3 +19,5 @@ MINS=20
 TARGET='i/lists/1733652180576686386;elonmusk'
 INFO='AI/人工智能'
 ```
+
+https://github.com/chatanywhere/GPT_API_free?tab=readme-ov-file#%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8
