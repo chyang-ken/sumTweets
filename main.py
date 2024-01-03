@@ -94,7 +94,7 @@ def sumTweets(prompt:str,lang = '中文',length:int = 10000, model='openai/gpt-3
         # df.to_csv('test.csv', index=False)
         tweets = df['content'].to_csv().replace(nitter, 'x.com')[:length]
         if len(prompt)<10:
-            prompt =  "<tweets>{tweets}</tweets>\n以上是一些推，你是一名{lang}专栏『{info}最新资讯』的资深作者，请在以上推中，挑选出和『{info}』相关信息(若有)的推,汇编成一篇用markdown排版的{lang}文章，包含发推时间、作者(若有)、推特链接(若有)和推特内容以及你的解读和评论，如果没有{info}相关资讯请回复『NOT FOUND』"
+            prompt =  "<tweets>{tweets}</tweets>\n以上是一些推，你是一名{lang}专栏『{info}最新资讯』的资深作者，请在以上推中，挑选出和『{info}』相关信息(若有)的推,汇编成一篇用markdown排版的{lang}文章，包含发推时间、作者(若有)、推特链接(若有)和推特内容、原文翻译以及你的解读和评论，如果没有{info}相关资讯请回复『NOT FOUND』"
         prompt =  prompt.format(tweets=tweets,lang=lang,info=info)
         print('tweets:', prompt)
         if not 'NOT FOUND' in result:
